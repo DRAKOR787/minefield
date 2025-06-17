@@ -4,6 +4,8 @@
 #include <random>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
+#include <sstream>
 
 int main() {
     std::vector<std::vector<int>> labyrinth = {
@@ -58,13 +60,15 @@ int main() {
     bool minesSpawned = false;
 
     sf::Clock clock;
+    sf::Clock gameTimer;
+    sf::Time elapsedTime;
 
     // Add game state and text
     bool gameOver = false;
     bool youWon = false;
     //creating font
     sf::Font font;
-    font.loadFromFile("arial.ttf"); 
+    font.loadFromFile("arial.ttf");
 
     sf::Text gameOverText("Game Over", font, 50);
     gameOverText.setFillColor(sf::Color::Red);
@@ -74,12 +78,26 @@ int main() {
     youWonText.setFillColor(sf::Color::Green);
     youWonText.setPosition(270, 250);
 
+    sf::Text timerText("", font, 24);
+    timerText.setFillColor(sf::Color::White);
+    timerText.setPosition(320, 10);
+
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        if (!gameOver && !youWon) {
+            elapsedTime = gameTimer.getElapsedTime();
+        }
+        int seconds = static_cast<int>(elapsedTime.asSeconds());
+        int minutes = seconds / 60;
+        seconds %= 60;
+        std::ostringstream ss;
+        ss << std::setw(2) << std::setfill('0') << minutes << ":" << std::setw(2) << std::setfill('0') << seconds;
+        timerText.setString("Time: " + ss.str());
+
         //player movement
         if (!gameOver && !youWon) {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
@@ -159,6 +177,7 @@ int main() {
         for (const auto& e : explosions) {
             if (!gameOver && guyS.getGlobalBounds().intersects(e.getGlobalBounds())) {
                 gameOver = true;
+                elapsedTime = gameTimer.getElapsedTime();
             }
         }
 
@@ -166,6 +185,7 @@ int main() {
         window.draw(flagS);
         if (!youWon && guyS.getGlobalBounds().intersects(flagS.getGlobalBounds())) {
             youWon = true;
+            elapsedTime = gameTimer.getElapsedTime();
         }
         //border bounds
         sf::FloatRect bounds = guyS.getGlobalBounds();
@@ -179,6 +199,8 @@ int main() {
 
         if (!gameOver && !youWon)
             window.draw(guyS);
+
+        window.draw(timerText);
 
         if (gameOver)
             window.draw(gameOverText);

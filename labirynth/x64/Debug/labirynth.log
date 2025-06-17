@@ -1,11 +1,11 @@
 ﻿  labirynth.cpp
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(26,23): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(44,24): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(44,19): warning C4305: "argument": obcięcie z "double" do "float"
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(103,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(103,41): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(119,50): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(119,42): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(133,65): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(133,45): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(28,23): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(46,24): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(46,19): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(121,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(121,41): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(137,50): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(137,42): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(151,65): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\jakub\source\repos\labirynth\labirynth\labirynth.cpp(151,45): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   labirynth.vcxproj -> C:\Users\jakub\source\repos\labirynth\x64\Debug\labirynth.exe
